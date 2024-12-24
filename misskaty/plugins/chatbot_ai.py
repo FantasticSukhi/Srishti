@@ -1,7 +1,3 @@
-# * @author        Yasir Aris M <yasiramunandar@gmail.com>
-# * @date          2023-06-21 22:12:27
-# * @projectName   MissKatyPyro
-# * Copyright ©YasirPedia All rights reserved
 import asyncio
 import html
 import privatebinapi
@@ -128,7 +124,7 @@ async def openai_chatbot(self, ctx: Message, strings):
     pertanyaan = ctx.input
     msg = await ctx.reply_msg(strings("find_answers_str"), quote=True)
     if uid not in gptai_conversations:
-        gptai_conversations[uid] = [{"role": "system", "content": "Kamu adalah AI dengan karakter mirip kucing bernama MissKaty AI yang diciptakan oleh Yasir untuk membantu manusia mencari informasi."}, {"role": "user", "content": pertanyaan}]
+        gptai_conversations[uid] = [{"role": "system", "content": "Kamu adalah AI dengan karakter mirip kucing bernama Srishti AI yang diciptakan oleh Yasir untuk membantu manusia mencari informasi."}, {"role": "user", "content": pertanyaan}]
     else:
         gptai_conversations[uid].append({"role": "user", "content": pertanyaan})
     ai_response = await get_openai_stream_response(True, OPENAI_KEY, "https://models.inference.ai.azure.com" if uid == OWNER_ID else "https://duckai.yasirapi.eu.org/v1", "gpt-4o" if uid == OWNER_ID else "gpt-4o-mini", gptai_conversations[uid], msg, strings)
