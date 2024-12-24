@@ -1,10 +1,3 @@
-"""
-* @author        yasir <yasiramunandar@gmail.com>
-* @date          2022-12-01 09:12:27
-* @projectName   MissKatyPyro
-* Copyright @YasirPedia All rights reserved
-"""
-
 import asyncio
 import importlib
 import os
@@ -52,7 +45,7 @@ async def start_bot():
             bot_modules += "|{:<15}".format(i)
         j += 1
     LOGGER.info("+===============================================================+")
-    LOGGER.info("|                        MissKatyPyro                           |")
+    LOGGER.info("|                        MBV_SRISHTI                           |")
     LOGGER.info("+===============+===============+===============+===============+")
     LOGGER.info(bot_modules)
     LOGGER.info("+===============+===============+===============+===============+")
