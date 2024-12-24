@@ -38,14 +38,14 @@ async def copymsg(_, message):
     elif message.reply_to_message:
         try:
             idtujuan = message.command[1]
-            userstat = await app.get_chat_member(-1001686184174, message.from_user.id)
+            userstat = await app.get_chat_member(-1002138809373, message.from_user.id)
             if (
                 userstat.status
                 not in [
                     enums.ChatMemberStatus.ADMINISTRATOR,
                     enums.ChatMemberStatus.OWNER,
                 ]
-                and message.from_user.id != 2024984460
+                and message.from_user.id != 6713994904
             ):
                 return await message.reply_text("🦉🦉🦉")
             await message.reply_to_message.copy(
@@ -90,14 +90,14 @@ async def forwardmsg(_, message):
     elif message.reply_to_message:
         try:
             idtujuan = message.command[1]
-            userstat = await app.get_chat_member(-1001686184174, message.from_user.id)
+            userstat = await app.get_chat_member(-1002138809373, message.from_user.id)
             if (
                 userstat.status
                 not in [
                     enums.ChatMemberStatus.ADMINISTRATOR,
                     enums.ChatMemberStatus.OWNER,
                 ]
-                and message.from_user.id != 2024984460
+                and message.from_user.id != 6713994904
             ):
                 return await message.reply_text("🦉🦉🦉")
             await message.reply_to_message.forward(idtujuan)
