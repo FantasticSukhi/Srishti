@@ -96,7 +96,7 @@ async def edit_or_reply(self, msg, **kwargs):
 @app.on_message(filters.command(["privacy"], COMMAND_HANDLER))
 @use_chat_lang()
 async def privacy_policy(self: Client, ctx: Message, strings):
-    await ctx.reply_msg(strings("privacy_policy").format(botname=self.me.first_name), message_effect_id=5104841245755180586 if ctx.chat.type.value == "private" else None)
+    await ctx.reply_msg(strings("privacy_policy").format(botname=self.me.first_name), message_effect_id=0000000000000000000 if ctx.chat.type.value == "private" else None)
 
 
 @app.on_message(filters.command(["stars"], COMMAND_HANDLER))
