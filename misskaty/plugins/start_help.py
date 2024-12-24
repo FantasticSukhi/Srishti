@@ -1,9 +1,3 @@
-"""
-* @author        yasir <yasiramunandar@gmail.com>
-* @date          2022-12-01 09:12:27
-* @projectName   MissKatyPyro
-* Copyright @YasirPedia All rights reserved
-"""
 import contextlib
 import re
 
@@ -26,8 +20,8 @@ home_keyboard_pm = InlineKeyboardMarkup(
         [
             InlineKeyboardButton(text="Commands ❓", callback_data="bot_commands"),
             InlineKeyboardButton(
-                text="Source Code 🛠",
-                url="https://github.com/yasirarism/MissKatyPyro",
+                text="Owner 🛠",
+                url="https://t.me/Your_Dream_Girul",
             ),
         ],
         [
@@ -35,7 +29,7 @@ home_keyboard_pm = InlineKeyboardMarkup(
                 text="System Stats 🖥",
                 callback_data="stats_callback",
             ),
-            InlineKeyboardButton(text="Dev 👨", url="https://t.me/YasirArisM"),
+            InlineKeyboardButton(text="Dev 👨", url="https://t.me/BLACK_HU_VRO"),
         ],
         [
             InlineKeyboardButton(
@@ -53,8 +47,8 @@ keyboard = InlineKeyboardMarkup(
         [
             InlineKeyboardButton(text="Help ❓", url=f"t.me/{BOT_USERNAME}?start=help"),
             InlineKeyboardButton(
-                text="Source Code �",
-                url="https://github.com/yasirarism/MissKatyPyro",
+                text="Owner",
+                url="https://t.me/Your_Dream_Girul",
             ),
         ],
         [
@@ -62,7 +56,7 @@ keyboard = InlineKeyboardMarkup(
                 text="System Stats 💻",
                 callback_data="stats_callback",
             ),
-            InlineKeyboardButton(text="Dev 👨", url="https://t.me/YasirArisM"),
+            InlineKeyboardButton(text="Dev 👨", url="https://t.me/BLACKMAMBA_HU_VRO"),
         ],
     ]
 )
@@ -90,7 +84,7 @@ async def start(self, ctx: Message, strings):
         nama = ctx.from_user.mention if ctx.from_user else ctx.sender_chat.title
         try:
             return await ctx.reply_photo(
-                photo="https://img.yasirweb.eu.org/file/90e9a448bc2f8b055b762.jpg",
+                photo="https://envs.sh/JK0.jpg",
                 caption=strings("start_msg").format(kamuh=nama),
                 reply_markup=keyboard,
             )
@@ -107,14 +101,14 @@ async def start(self, ctx: Message, strings):
             await ctx.reply_msg(
                 text,
                 disable_web_page_preview=True,
-                message_effect_id=5104841245755180586,
+                message_effect_id=0000000000000000000,
             )
             if module == "federation":
                 return await ctx.reply(
                     text=text,
                     reply_markup=FED_MARKUP,
                     disable_web_page_preview=True,
-                    message_effect_id=5104841245755180586,
+                    message_effect_id=0000000000000000000,
                 )
             await ctx.reply(
                 text,
@@ -122,21 +116,21 @@ async def start(self, ctx: Message, strings):
                     [[InlineKeyboardButton("back", callback_data="help_back")]]
                 ),
                 disable_web_page_preview=True,
-                message_effect_id=5104841245755180586,
+                message_effect_id=0000000000000000000,
             )
         elif name == "help":
             text, keyb = await help_parser(ctx.from_user.first_name)
             await ctx.reply_msg(
-                text, reply_markup=keyb, message_effect_id=5104841245755180586
+                text, reply_markup=keyb, message_effect_id=0000000000000000000
             )
     else:
         await self.send_photo(
             ctx.chat.id,
-            photo="https://img.yasirweb.eu.org/file/90e9a448bc2f8b055b762.jpg",
+            photo="https://envs.sh/JK0.jpg",
             caption=home_text_pm,
             reply_markup=home_keyboard_pm,
             reply_to_message_id=ctx.id,
-            message_effect_id=5104841245755180586,
+            message_effect_id=0000000000000000000,
         )
 
 
@@ -147,7 +141,7 @@ async def commands_callbacc(_, cb: CallbackQuery):
         cb.message.chat.id,
         text=text,
         reply_markup=keyb,
-        message_effect_id=5104841245755180586,
+        message_effect_id=0000000000000000000,
     )
     await cb.message.delete_msg()
 
@@ -194,7 +188,7 @@ async def help_command(_, ctx: Message, strings):
             await ctx.reply_msg(
                 text,
                 disable_web_page_preview=True,
-                message_effect_id=5104841245755180586,
+                message_effect_id=0000000000000000000,
             )
         else:
             text, help_keyboard = await help_parser(ctx.from_user.first_name)
@@ -202,7 +196,7 @@ async def help_command(_, ctx: Message, strings):
                 text,
                 reply_markup=help_keyboard,
                 disable_web_page_preview=True,
-                message_effect_id=5104841245755180586,
+                message_effect_id=0000000000000000000,
             )
     else:
         text, help_keyboard = await help_parser(ctx.from_user.first_name)
@@ -210,7 +204,7 @@ async def help_command(_, ctx: Message, strings):
             text,
             reply_markup=help_keyboard,
             disable_web_page_preview=True,
-            message_effect_id=5104841245755180586,
+            message_effect_id=0000000000000000000,
         )
 
 
@@ -227,7 +221,7 @@ Send command /privacy if you want know data collected by this bot.
 If you want give coffee to my owner you can send /donate command for more info.
 """.format(
             first_name=name,
-            bot_name="MissKaty",
+            bot_name="srishti",
         ),
         keyb,
     )
