@@ -221,7 +221,7 @@ Send command /privacy if you want know data collected by this bot.
 If you want give coffee to my owner you can send /donate command for more info.
 """.format(
             first_name=name,
-            bot_name="srishti",
+            bot_name="misskaty",
         ),
         keyb,
     )
